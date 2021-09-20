@@ -26,7 +26,7 @@ namespace CRUD_KENDOUI.Controllers
         public IActionResult Privacy()
         {
             return View();
-        } //Cuong dep trai
+        } //Cuong dep trai. ahihi
 
        // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
