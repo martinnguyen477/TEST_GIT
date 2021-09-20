@@ -14,5 +14,6 @@ namespace CRUD_KENDOUI.Models
         public string Address { get; set; }
 
         public string Phone { get; set; }
+        ///cường đẹp trai ahih
     }
 }
