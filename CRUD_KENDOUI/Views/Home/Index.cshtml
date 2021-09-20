@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4"> Kendo UI </h1>
+</div>
+
+<div class="col-md-12">
+    <p> Kendo Version <strong id="kendoVersion"> </strong></p>
+    <input id="comboBox" />
+</div>
+
+
+<div id="grid"></div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#kendoVersion").text(kendo.version);
+
+        var CustomerHelper = {
+            GenerateColumns: function () {
+                return columns =
+                [
+                { field: "Id", title: "Id", width: 50, editable: false },
+                { field: "Name", title: "Name", width: 100, editable: false },
+                { field: "Address", title: "Address", width: 150, editable: false },
+                { field: "Phone", title: "Phone", width: 100, editable: false }
+                ]
+                
+            },
+
+            gridDataSource: function () {
+                var dataSource = new kendo.data.DataSource({
+                    type: "json",
+                    serverPaging: true,
+                    //serverSorting: true,
+                    //serverFiltering: true,
+                    //allowUnsort: true,
+                    pageSize: 5,
+                    transport: {
+                        read: {
+                            url: '../Customer/GetCustomer',
+                            type: "GET",
+                            dataType: "json"
+                        },
+                        //parameterMap: function (options) {
+                        //    return options;
+                        //}
+                    },
+                    schema: {
+                        data: "Items", total: "TotalCount",
+                        model: {
+                            fields: {
+
+                            }
+                        },
+                    }
+
+                });
+                return dataSource;
+            }
+        }
+
+        $("#comboBox").kendoComboBox({
+            dataSource: [
+                { Id: 1, Name: "Cuong" },
+                { Id: 2, Name: "Duy" },
+                { Id: 3, Name: "Diệp" },
+                { Id: 4, Name: "Kim Anh" },
+                { Id: 5, Name: "Nhật" },
+                { Id: 6, Name: "Đức" }
+            ],
+            dataTextField: "Name",
+            placeholder: "Select",
+            dataValueField: "Name",
+            index: 0,
+            filter: "contains"
+        });
+        
+        var dropdownlist = $("#comboBox").data("kendoComboBox");
+        console.log(dropdownlist.);
+
+
+        $("#grid").kendoGrid({
+            
+            
+                //[
+                //{ field: "Id", title: "Id", width: 50, editable: false },
+                //{ field: "Name", title: "Name", width: 100, editable: false },
+                //{ field: "Address", title: "Address", width: 150, editable: false },
+                //{ field: "Phone", title: "Phone", width: 100, editable: false },
+                //]
+            columns: CustomerHelper.GenerateColumns(),
+            dataSource: CustomerHelper.gridDataSource()
+                //[
+                //{ Id: 1, Name: "Nguyễn Quốc Cường", Address: "Thôn 8 xã Earal huyện Eahleo tỉnh Đawk Lăk", Phone: "036707077"},
+                //{ Id: 2, Name: "Nguyễn Quốc Cường", Address: "Thôn 8 xã Earal huyện Eahleo tỉnh Đawk Lăk", Phone: "036707077"},
+                //{ Id: 3, Name: "Nguyễn Quốc Cường", Address: "Thôn 8 xã Earal huyện Eahleo tỉnh Đawk Lăk", Phone: "036707077"},
+                //{ Id: 4, Name: "Nguyễn Quốc Cường", Address: "Thôn 8 xã Earal huyện Eahleo tỉnh Đawk Lăk", Phone: "036707077"},
+                //{ Id: 5, Name: "Nguyễn Quốc Cường", Address: "Thôn 8 xã Earal huyện Eahleo tỉnh Đawk Lăk", Phone: "036707077"},
+                //{ Id: 6, Name: "Nguyễn Quốc Cường", Address: "Thôn 8 xã Earal huyện Eahleo tỉnh Đawk Lăk", Phone: "036707077"},
+                //]
+            ,
+            filterable: true,
+            sortable: true,
+            editable: true,
+            //columns: [{ field: "Id", title: "Id", width: 50, editable: false }],
+           
+            navigatable: true,
+            selectable: "columns",
+
+        });
+        console.log(CustomerHelper.GenerateColumns());
+        console.log(CustomerHelper.gridDataSource());
+
+        //$("#grid").kendoGrid({
+        //    columns: [
+        //        { field: "name" },
+        //        { field: "age" }
+        //    ],
+        //    dataSource: [
+        //        { name: "Jane Doe", age: 30 }
+        //    ]
+        //});
+
+
+
+        
+    });
+</script>
