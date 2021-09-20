@@ -18,6 +18,10 @@ namespace CRUD_KENDOUI.Controllers
             };
             return new JsonResult(result);
             ///comment
+            ///ahihi
+            ///cường
+            ///diệp
+            ///
         }
     }
 }
