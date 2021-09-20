@@ -21,7 +21,7 @@ namespace CRUD_KENDOUI.Controllers
         public IActionResult Index()
         {
             return View();
-        }
+        } //vãi cả đái
 
         public IActionResult Privacy()
         {
