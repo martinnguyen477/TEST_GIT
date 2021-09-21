@@ -30,6 +30,8 @@ namespace CRUD_KENDOUI.Controllers
         /// ccc
         /// </summary>
         /// <returns></returns>
+        /// ///
+        /// update 2
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
