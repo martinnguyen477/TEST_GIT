@@ -7,5 +7,6 @@ namespace CRUD_KENDOUI
 {
     public class Class
     {
+        ///cc
     }
 }
