@@ -26,7 +26,10 @@ namespace CRUD_KENDOUI.Controllers
         public IActionResult Privacy()
         {
             return View();
-        }
+        }/// <summary>
+        /// ccc
+        /// </summary>
+        /// <returns></returns>
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
