@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "iFZy3jtKF6xc/UoHmnT8otR1vyb7RAW39x43fOkD8SSPjWhkg5G59uwJKclVbp9+vjuMYxxgBCaryT+YyOLE1g==",
+  "dgSpecHash": "b8/1UEbkib855SwUyGDioKpq4J8tHbNfYjhJoynmH1TDN6nWaaT1Wh0qKH7alHrGNd7V6aSWv53nk1aFqSiScw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nguyen Quoc Cuong\\source\\repos\\CRUD_KENDOUI\\CRUD_KENDOUI\\CRUD_KENDOUI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.2\\swashbuckle.aspnetcore.swagger.6.2.2.nupkg.sha512"
   ],
   "logs": []
 }
