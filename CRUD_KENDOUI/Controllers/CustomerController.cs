@@ -17,6 +17,8 @@ namespace CRUD_KENDOUI.Controllers
                 TotalCount = cus.Count
             };
             return new JsonResult(result);
+            ///casgasgasga force checkout/
+            //hhh/h/h/h/h/h/h/
 
         }
     }
