@@ -38,6 +38,7 @@ namespace CRUD_KENDOUI.Controllers
         ////ccuong
         ////Huy
         //Tài
+        //Diệp
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
