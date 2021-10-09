@@ -36,6 +36,7 @@ namespace CRUD_KENDOUI.Controllers
         /// update 22
         /// cccc
         ////ccuong
+        //Tài
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
